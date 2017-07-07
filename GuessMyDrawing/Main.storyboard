@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Drawing View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DrawingViewController" customModule="GuessMyDrawing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BRv-7o-pis" customClass="DrawingView" customModule="GuessMyDrawing" customModuleProvider="target">
+                                <rect key="frame" x="262" y="433" width="500" height="500"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="Pej-SH-mUK"/>
+                                    <constraint firstAttribute="width" secondItem="BRv-7o-pis" secondAttribute="height" multiplier="1:1" id="djn-DL-2Cf"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRS-dp-r5e">
+                                <rect key="frame" x="431.5" y="403.5" width="161" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Try drawing: octopus">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcQ-iw-WHN">
+                                <rect key="frame" x="660" y="940.5" width="102" height="30"/>
+                                <state key="normal" title="Next challenge"/>
+                                <connections>
+                                    <action selector="nextChallengeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4MG-m2-ygs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lW0-Cq-kjp">
+                                <rect key="frame" x="262" y="940.5" width="95" height="30"/>
+                                <state key="normal" title="Clear drawing"/>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MKK-5J-q0r"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting for drawing..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CZ-ET-MLi">
+                                <rect key="frame" x="20" y="56" width="984" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BRv-7o-pis" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0oR-sR-tLq"/>
+                            <constraint firstItem="7CZ-ET-MLi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="6Kh-Qf-5wV"/>
+                            <constraint firstAttribute="trailing" secondItem="7CZ-ET-MLi" secondAttribute="trailing" constant="20" id="6oW-f6-n0m"/>
+                            <constraint firstItem="NRS-dp-r5e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UCB-2w-zRY"/>
+                            <constraint firstItem="lW0-Cq-kjp" firstAttribute="leading" secondItem="BRv-7o-pis" secondAttribute="leading" id="XiQ-id-ix0"/>
+                            <constraint firstItem="DcQ-iw-WHN" firstAttribute="trailing" secondItem="BRv-7o-pis" secondAttribute="trailing" id="ikd-Sh-0tI"/>
+                            <constraint firstItem="BRv-7o-pis" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="liT-YF-PeN"/>
+                            <constraint firstItem="BRv-7o-pis" firstAttribute="top" secondItem="NRS-dp-r5e" secondAttribute="bottom" constant="8" id="mUu-PJ-tPg"/>
+                            <constraint firstItem="lW0-Cq-kjp" firstAttribute="top" secondItem="BRv-7o-pis" secondAttribute="bottom" constant="8" id="nPB-Nh-j7G"/>
+                            <constraint firstItem="7CZ-ET-MLi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="w2l-Lp-dx2"/>
+                            <constraint firstItem="DcQ-iw-WHN" firstAttribute="top" secondItem="BRv-7o-pis" secondAttribute="bottom" constant="7.5" id="yQe-XX-iUU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="canvasSize" destination="Pej-SH-mUK" id="CiP-Kp-Nt5"/>
+                        <outlet property="drawingView" destination="BRv-7o-pis" id="bPv-n6-1YZ"/>
+                        <outlet property="guideLabel" destination="NRS-dp-r5e" id="tTZ-yR-5kq"/>
+                        <outlet property="resultsLabel" destination="7CZ-ET-MLi" id="EMl-9E-XDZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108.984375" y="37.774524158125914"/>
+        </scene>
+    </scenes>
+</document>
