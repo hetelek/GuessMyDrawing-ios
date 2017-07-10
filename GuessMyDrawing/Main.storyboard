@@ -27,15 +27,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BRv-7o-pis" customClass="DrawingView" customModule="GuessMyDrawing" customModuleProvider="target">
-                                <rect key="frame" x="262" y="433" width="500" height="500"/>
+                                <rect key="frame" x="212" y="383" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="500" id="Pej-SH-mUK"/>
+                                    <constraint firstAttribute="width" constant="600" id="B6P-ab-3b4"/>
                                     <constraint firstAttribute="width" secondItem="BRv-7o-pis" secondAttribute="height" multiplier="1:1" id="djn-DL-2Cf"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRS-dp-r5e">
-                                <rect key="frame" x="431.5" y="403.5" width="161" height="21"/>
+                                <rect key="frame" x="431.5" y="353.5" width="161" height="21"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Try drawing: octopus">
                                         <attributes>
@@ -46,31 +46,93 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcQ-iw-WHN">
-                                <rect key="frame" x="660" y="940.5" width="102" height="30"/>
+                                <rect key="frame" x="710" y="991" width="102" height="30"/>
                                 <state key="normal" title="Next challenge"/>
                                 <connections>
                                     <action selector="nextChallengeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4MG-m2-ygs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lW0-Cq-kjp">
-                                <rect key="frame" x="262" y="940.5" width="95" height="30"/>
-                                <state key="normal" title="Clear drawing"/>
-                                <connections>
-                                    <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MKK-5J-q0r"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting for drawing..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CZ-ET-MLi">
-                                <rect key="frame" x="20" y="56" width="984" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting for drawing..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7CZ-ET-MLi">
+                                <rect key="frame" x="20" y="56" width="984" height="31.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBU-kB-sgF">
+                                <rect key="frame" x="375.5" y="1343" width="273" height="15"/>
+                                <gestureRecognizers/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Model trained on ">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Google's Quick, Draw! dataset">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17254901959999999" green="0.51764705879999995" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=".">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="svO-Ff-ynx" appends="YES" id="ics-Tc-Frq"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPE-UC-HMw">
+                                <rect key="frame" x="433.5" y="1320" width="157" height="15"/>
+                                <gestureRecognizers/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Source available on ">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="GitHub">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17254901959999999" green="0.51764705879999995" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=".">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="oeZ-kQ-OgC" appends="YES" id="v9m-MG-sVd"/>
+                                </connections>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lW0-Cq-kjp">
+                                <rect key="frame" x="212" y="991" width="88" height="30"/>
+                                <state key="normal" title="Clear canvas"/>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MKK-5J-q0r"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BRv-7o-pis" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0oR-sR-tLq"/>
                             <constraint firstItem="7CZ-ET-MLi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="6Kh-Qf-5wV"/>
                             <constraint firstAttribute="trailing" secondItem="7CZ-ET-MLi" secondAttribute="trailing" constant="20" id="6oW-f6-n0m"/>
+                            <constraint firstItem="VPE-UC-HMw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FzV-Q4-hPu"/>
+                            <constraint firstItem="CBU-kB-sgF" firstAttribute="top" secondItem="VPE-UC-HMw" secondAttribute="bottom" constant="8" id="J3X-b7-aXe"/>
                             <constraint firstItem="NRS-dp-r5e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UCB-2w-zRY"/>
                             <constraint firstItem="lW0-Cq-kjp" firstAttribute="leading" secondItem="BRv-7o-pis" secondAttribute="leading" id="XiQ-id-ix0"/>
                             <constraint firstItem="DcQ-iw-WHN" firstAttribute="trailing" secondItem="BRv-7o-pis" secondAttribute="trailing" id="ikd-Sh-0tI"/>
@@ -78,17 +140,29 @@
                             <constraint firstItem="BRv-7o-pis" firstAttribute="top" secondItem="NRS-dp-r5e" secondAttribute="bottom" constant="8" id="mUu-PJ-tPg"/>
                             <constraint firstItem="lW0-Cq-kjp" firstAttribute="top" secondItem="BRv-7o-pis" secondAttribute="bottom" constant="8" id="nPB-Nh-j7G"/>
                             <constraint firstItem="7CZ-ET-MLi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="w2l-Lp-dx2"/>
-                            <constraint firstItem="DcQ-iw-WHN" firstAttribute="top" secondItem="BRv-7o-pis" secondAttribute="bottom" constant="7.5" id="yQe-XX-iUU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CBU-kB-sgF" secondAttribute="bottom" constant="8" id="y6g-Jx-slL"/>
+                            <constraint firstItem="DcQ-iw-WHN" firstAttribute="top" secondItem="BRv-7o-pis" secondAttribute="bottom" constant="8" id="yQe-XX-iUU"/>
+                            <constraint firstItem="CBU-kB-sgF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zvp-1O-U1j"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="canvasSize" destination="Pej-SH-mUK" id="CiP-Kp-Nt5"/>
+                        <outlet property="canvasSize" destination="B6P-ab-3b4" id="PPl-eh-jz6"/>
                         <outlet property="drawingView" destination="BRv-7o-pis" id="bPv-n6-1YZ"/>
                         <outlet property="guideLabel" destination="NRS-dp-r5e" id="tTZ-yR-5kq"/>
                         <outlet property="resultsLabel" destination="7CZ-ET-MLi" id="EMl-9E-XDZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="svO-Ff-ynx">
+                    <connections>
+                        <action selector="googleTextTapped:" destination="BYZ-38-t0r" id="crH-TA-abu"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="oeZ-kQ-OgC">
+                    <connections>
+                        <action selector="sourceTextTapped:" destination="BYZ-38-t0r" id="fd9-Ob-erm"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="108.984375" y="37.774524158125914"/>
         </scene>

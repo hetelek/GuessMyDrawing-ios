@@ -1,6 +1,7 @@
-import UIKit
-import CoreGraphics
 import CoreML
+import CoreGraphics
+import SafariServices
+import UIKit
 
 public class DrawingViewController: UIViewController, DrawingViewDelegate {
     // MARK: - IBOutlets
@@ -82,6 +83,15 @@ public class DrawingViewController: UIViewController, DrawingViewDelegate {
         newChallenge()
     }
     
+    @IBAction func googleTextTapped(_ sender: Any) {
+        let safariController = SFSafariViewController(url: URL(string: "https://quickdraw.withgoogle.com/data")!)
+        show(safariController, sender: self)
+    }
+    
+    @IBAction func sourceTextTapped(_ sender: Any) {
+        let safariController = SFSafariViewController(url: URL(string: "https://github.com/hetelek/GuessMyDrawing-ios")!)
+        show(safariController, sender: self)
+    }
     
     // MARK: - Game methods
     private func newChallenge() {
