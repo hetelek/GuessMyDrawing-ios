@@ -1,5 +1,5 @@
 # Guess My Drawing
-Guess My Drawing classifies drawn images into 1 of 345 categories. I trained the model on [Google's Quick, Draw! dataset](https://quickdraw.withgoogle.com/data), and use iOS 11's CoreML framework to run the trained model.
+Guess My Drawing classifies drawn images, currently supporting 345 different categories. It displays the top-5 confidence categories. I trained the model on [Google's Quick, Draw! dataset](https://quickdraw.withgoogle.com/data), and use iOS 11's CoreML framework to run the trained model.
 
 
 ### Device Installation
